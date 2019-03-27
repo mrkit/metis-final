@@ -45,8 +45,8 @@ class TableSection extends Component {
                           <tr>
                             <th className="table-repo-name">Repo</th>
                             <th className="table-description">Description</th>
-                            <th>Link</th>
-                            <th>Topic</th>
+                            <th className="table-link">Link</th>
+                            <th className="table-topic">Topic</th>
                           </tr>
                         </MDBTableHead>
                         <MDBTableBody>
@@ -66,17 +66,17 @@ class TableSection extends Component {
                     </MDBCardBody>
                 </MDBCard>
             </MDBCol>
-            <MDBCol md="6" className="mb-4">
+            <MDBCol md="6">
                 <MDBCard className='repo-comparisons-recommendation'>
                     <MDBCardBody className='repo-comparisons-recommendation-item'>
                       <MDBTable hover>
                         <MDBTableHead color="blue lighten-4">
                           <tr>
-                            <th className="table-repo-name">Repo</th>
-                            <th className="table-description">Description</th>
-                            <th>Topic</th>
-                            <th>Language</th>
-                            <th className="table-repo-owner">Repo Owner</th>
+                            <th className="table-repo-name-2">Repo</th>
+                            <th className="table-description-2">Description</th>
+                            <th className="table-topic-2">Topic</th>
+                            <th className="table-language-2">Language</th>
+                            <th className="table-repo-owner-2">Repo Owner</th>
                             <th>Owner Email</th>
                           </tr>
                         </MDBTableHead>

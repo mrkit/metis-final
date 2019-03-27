@@ -23,7 +23,7 @@ const TopNavigation = () => {
                 <NavLink to="/dashboard" activeClassName="activeClass">
                     <MDBListGroupItem>
                         <MDBIcon icon="table" className="mr-3"/>
-                        Dashboard
+                        Discover
                     </MDBListGroupItem>
                 </NavLink>
   
