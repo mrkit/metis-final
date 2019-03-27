@@ -215,6 +215,11 @@ main {
 }
 
 /* ---- */
+.Login-form-input {
+  border-style: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
 
 .Login-form-button {
   border: 0;
@@ -290,4 +295,145 @@ main {
 .App-users-items-ul-li {
   list-style: circle;
   text-align: left;
+}
+
+.profile {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.profile-user {
+  width: 20rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  color: #747373;
+}
+
+.profile-user h2 {
+  color: black;
+}
+
+.profile-user h3 {
+  color: #3f51b5;
+}
+
+.profile-user-image {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.profile-user-url {
+  justify-self: center; 
+}
+
+.repos {
+  display: grid;
+  grid-template-columns:  repeat(auto-fill, 22rem);
+  grid-gap: 5rem;
+  justify-content: space-around;
+}
+
+.repo {
+  width: 21rem;
+  height: 23rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  font-weight: 400;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.repo-image {
+  max-width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.repo-body {
+  padding: 1rem;
+}
+
+.repo-body-title {
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: center;
+  height: 3rem;
+  margin: 0;
+}
+
+.repo-body-text {
+  color: #747373;
+  font-size: 0.9rem;
+  font-weight: 400;
+  height: 3rem;
+  overflow: scroll;
+}
+
+.repo-body-footer {
+  background-color: rgba(0,0,0,.03);
+  border-top: 1px solid rgba(0,0,0,.125);
+  width: 30rem;
+  display: grid;
+  margin-left: -1rem;
+  height: 10rem;
+  align-self: center;
+  padding: .5rem;
+}
+
+.repo-comparisons {
+  height: 100%;
+}
+.repo-comparisons-recommendation {
+  height: 35.2rem;
+  overflow: scroll;
+}
+
+table {
+  table-layout: fixed;
+}
+
+table th {
+  font-weight: 500;
+/*  font-size: 1.5rem;*/
+}
+
+table tr {
+  overflow: scroll;
+}
+
+/* Table CSS */
+.table-repo-name {
+/*  width: 10rem;*/
+}
+
+.table-repo-owner {
+  border-left: 1px solid black;
+}
+
+.table-description {
+/*  width: 15rem;*/
+}
+
+.repo-comparisons-recommendation-item {
+  height: inherit;
+  max-width: 100%;
+  overflow: scroll;
+}
+
+.empty-recommendation {
+  position: absolute;
+  left: 23rem;
+  top: 17rem;
+  border-bottom: 1px solid rgba(0,0,0,.125);
 }

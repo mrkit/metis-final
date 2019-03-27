@@ -3,10 +3,12 @@ import { MDBCard, MDBCardBody, MDBTable, MDBTableBody, MDBTableHead, MDBRow, MDB
 import repos from '../../../assets/metis-data/repos_try_2';
 import EmptyRecommendation from './EmptyRecommendationSection';
 
-import deeplearningmodels from '../../../assets/metis-data/repo_2_final 2';
-import deeplearningwithpythonnotebooks from '../../../assets/metis-data/repo_3_final 2';
-import kerasResources from '../../../assets/metis-data/repo_6_final 2';
-import tensorFLow from '../../../assets/metis-data/repo_8_final 2';
+import deeplearningmodels from '../../../assets/metis-data/repo_2_final';
+import deeplearningwithpythonnotebooks from '../../../assets/metis-data/repo_3_final';
+import kerasResources from '../../../assets/metis-data/repo_6_final';
+import tensorFLow from '../../../assets/metis-data/repo_8_final';
+
+console.log('Start', deeplearningmodels, 'HIHI', tensorFLow);
 
 
 class TableSection extends Component {
@@ -52,6 +54,8 @@ class TableSection extends Component {
                         <MDBTableBody>
                           {
                             repos.map(repo => {
+
+
                               return <tr key={repo[0]} onClick={handleClick}>
                                 <td>{repo[1]}</td>
                                 <td>{repo[2]}</td>
@@ -74,10 +78,8 @@ class TableSection extends Component {
                           <tr>
                             <th className="table-repo-name">Repo</th>
                             <th className="table-description">Description</th>
+                            <th>Link</th>
                             <th>Topic</th>
-                            <th>Language</th>
-                            <th className="table-repo-owner">Repo Owner</th>
-                            <th>Owner Email</th>
                           </tr>
                         </MDBTableHead>
                          {
@@ -85,18 +87,14 @@ class TableSection extends Component {
                             <EmptyRecommendation/> :
                             <MDBTableBody>
 
-                              {recommendations.map(repo => {
-                            console.log('Repo', repo)
-                            return (
-                                <tr key={repo[2]}>
-                                <td><a href={repo[3]}>{repo[6]}</a></td>
+                              {recommendations.map(repo => (
+                                <tr key={repo[0]}>
+                                  <td>{repo[57].login}</td>
+                                  <td>{repo[3]}</td>
+                                  <td><a href={repo[3]}>Link</a></td>
                                   <td>{repo[0]}</td>
-                                  <td>{repo[1]}</td>
-                                  <td>{repo[4]}</td>
-                                  <td className="table-repo-owner"><a href={repo[5].html_url}>{repo[5].login}</a></td>
-                                  <td><a href={`mailto:${repo[5].email}`}>{repo[5].email}</a></td>
                                 </tr>
-                              )})}
+                              ))}
                             </MDBTableBody>
 
                           }

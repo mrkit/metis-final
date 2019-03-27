@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { MDBRow, MDBCol, MDBView, MDBCard, MDBCardBody, MDBTable, MDBTableHead, MDBTableBody, MDBCardText } from 'mdbreact';
+import { MDBRow, MDBCol, MDBView, MDBCard, MDBCardBody } from 'mdbreact';
 
 class DataPage extends Component {
   state = {
-    loggedIn: false,
     users: []
   }
   
@@ -15,7 +14,7 @@ class DataPage extends Component {
   }
   
   render(){
-    const { users, loggedIn } = this.state;
+    const { users } = this.state;
     
     return (
     <>

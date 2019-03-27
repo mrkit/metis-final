@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink } from 'mdbreact';
 import Login from './pages/Login';
 
 class TopNavigation extends Component {
     state = {
-      collapse: false,
-      loggedIn: false
+      collapse: false
     }
 
     onClick = () => {
@@ -21,12 +20,12 @@ class TopNavigation extends Component {
     }
 
     render() {
-      const { collapse, loggedIn} = this.state;
-      
+      const { collapse } = this.state;
+      const { handleLogin, loggedIn } = this.props;
         return (
             <MDBNavbar className="flexible-navbar" light expand="md" scrolling>
                 <MDBNavbarBrand href="/">
-                    <strong>Github Friends</strong>
+                    <strong>GitHub Discover</strong>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick = { this.onClick } />
                 <MDBCollapse isOpen = { collapse } navbar>
@@ -37,7 +36,7 @@ class TopNavigation extends Component {
                     </MDBNavbarNav>
                     <MDBNavbarNav right>
                       <MDBNavItem active>
-                       { loggedIn ? <button>Logout</button> : <Login/>}
+                       <Login handleLogin={handleLogin} loggedIn={loggedIn}/>
                       </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>

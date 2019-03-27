@@ -8,6 +8,7 @@ class Login extends Component {
   }
 
   handleSubmit = e => {
+    //unused, but works to log someone in to github.
     e.preventDefault();
     const username = e.target.username.value;
     
@@ -16,11 +17,16 @@ class Login extends Component {
 
   render(){
     const { handleSubmit } = this;
-    
+    const { handleLogin, loggedIn } = this.props;
+    console.log('Hello', loggedIn)
     return (
-      <form className='Login-form' onSubmit={handleSubmit}>
-        <input type='text' name='username' placeholder='Github Username'/>
-        <button className='Login-form-button'>Sign in to Github</button>
+      <form className='Login-form' onSubmit={handleLogin}>
+        { !loggedIn ? 
+          <>
+          <input className='Login-form-input' type='text' name='username' placeholder='Choose a username' autoFocus autoComplete='off'/>
+          <button className='Login-form-button'>Pull Public Data</button> </>:
+          <button className='Login-form-button'>Logout</button>
+          }
       </form>
     )
   }

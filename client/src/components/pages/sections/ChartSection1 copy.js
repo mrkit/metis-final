@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBRow, MDBListGroup, MDBListGroupItem, MDBBadge, MDBIcon } from 'mdbreact';
 import { Bar, Pie } from 'react-chartjs-2';
-import repoInfo from '../../../assets/metis-data/repos_merged_grouped_sum_df';
-
-console.log(JSON.parse(repoInfo));
 
 class ChartSection1 extends Component {
     render(){
@@ -53,7 +50,14 @@ class ChartSection1 extends Component {
         }
 
         return (
-            <MDBRow className="mb-4 chart">
+            <MDBRow className="mb-4">
+                <MDBCol md="8"className="mb-4">
+                    <MDBCard className="mb-4">
+                        <MDBCardBody>
+                            <Bar data={dataBar} height={500} options={barChartOptions} />
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBCol>
                 <MDBCol md="4" className="mb-4">
                   
                     <MDBCard className="mb-4">
